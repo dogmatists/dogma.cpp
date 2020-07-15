@@ -1,0 +1,18 @@
+---
+name: Continuous integration
+on: push
+jobs:
+  lint:
+    name: Lint source code
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Record the Clang version
+        run: clang --version
+      - name: Record the GCC version
+        run: gcc --version
+      - name: Check syntax using Clang
+        run: make lint CC=clang
+      - name: Check syntax using GCC
+        run: make lint CC=gcc
