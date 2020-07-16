@@ -18,4 +18,11 @@
 #error "<dogma.hpp> requires a C++17 or newer compiler (CXXFLAGS='-std=c++17')"
 #endif
 
-namespace dogma {}
+namespace dogma {
+  class Angle;
+}
+
+class dogma::Angle {
+public:
+  double radians;
+};
