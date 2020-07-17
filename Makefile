@@ -4,6 +4,8 @@ libdir        = $(exec_prefix)/lib
 includedir    = $(prefix)/include
 datarootdir   = $(prefix)/share
 
+RAKE          = rake
+
 HEADERS      := dogma.hpp
 
 # The default target:
@@ -40,6 +42,9 @@ uninstall:
 .PHONY: uninstall
 
 # Rules for development:
+
+dogma.hpp: Rakefile dogma.hpp.in $(wildcard dogma/*.hpp)
+	@$(RAKE) $@
 
 lint: lint-hpp
 
