@@ -20,9 +20,24 @@
 
 namespace dogma {
   class Angle;
+  class Latitude;
+  class Longitude;
 }
 
+// See: https://dogma.dev/Angle/
 class dogma::Angle {
+public:
+  double radians;
+};
+
+// See: https://dogma.dev/Latitude/
+class dogma::Latitude {
+public:
+  double radians;
+};
+
+// See: https://dogma.dev/Longitude/
+class dogma::Longitude {
 public:
   double radians;
 };

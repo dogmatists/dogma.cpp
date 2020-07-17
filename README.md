@@ -4,6 +4,8 @@
 [![C++ compatibility](https://img.shields.io/badge/c%2B%2B-17%20%7C%2020-blue)](#)
 [![Continuous integration](https://github.com/dogmatists/dogma.cpp/workflows/Continuous%20integration/badge.svg)](https://github.com/dogmatists/dogma.cpp/actions?query=workflow%3A%22Continuous+integration%22)
 
+<https://dogma.dev>
+
 ## Prerequisites
 
 - [C++17][] compiler (for example, [Clang][] 5+, [GCC][] 7+, or [MSVC][] 19.14+)
@@ -44,6 +46,10 @@ $ sudo make install
 ### Enums
 
 ### Classes
+
+- [`dogma::Angle`](https://dogma.dev/Angle/)
+- [`dogma::Latitude`](https://dogma.dev/Latitude/)
+- [`dogma::Longitude`](https://dogma.dev/Longitude/)
 
 ### Functions
 
