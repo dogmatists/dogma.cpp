@@ -55,4 +55,12 @@ $ sudo make install
 
 ## See Also
 
-- [Dogma for C](https://github.com/dogmatists/dogma.c)
+Dogma for [C][], [Dart][], [Protobuf][], [Python][], [Ruby][], and [Zig][].
+
+[C]:        https://github.com/dogmatists/dogma.c
+[C++]:      https://github.com/dogmatists/dogma.cpp
+[Dart]:     https://github.com/dogmatists/dogma.dart
+[Protobuf]: https://github.com/dogmatists/dogma.pb
+[Python]:   https://github.com/dogmatists/dogma.py
+[Ruby]:     https://github.com/dogmatists/dogma.rb
+[Zig]:      https://github.com/dogmatists/dogma.zig
