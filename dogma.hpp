@@ -26,17 +26,17 @@ namespace dogma {
   class Longitude;
 }
 
-// See: https://dogma.dev/Angle/
+// See: https://dogma.dev/Angle
 struct dogma::Angle {
   double radians;
 };
 
-// See: https://dogma.dev/Latitude/
+// See: https://dogma.dev/Latitude
 struct dogma::Latitude {
   double radians;
 };
 
-// See: https://dogma.dev/Longitude/
+// See: https://dogma.dev/Longitude
 struct dogma::Longitude {
   double radians;
 };

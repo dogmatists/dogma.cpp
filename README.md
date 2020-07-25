@@ -47,9 +47,9 @@ $ sudo make install
 
 ### Classes
 
-- [`dogma::Angle`](https://dogma.dev/Angle/)
-- [`dogma::Latitude`](https://dogma.dev/Latitude/)
-- [`dogma::Longitude`](https://dogma.dev/Longitude/)
+- [`dogma::Angle`](https://dogma.dev/Angle)
+- [`dogma::Latitude`](https://dogma.dev/Latitude)
+- [`dogma::Longitude`](https://dogma.dev/Longitude)
 
 ### Functions
 

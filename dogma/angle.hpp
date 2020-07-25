@@ -6,7 +6,7 @@ namespace dogma {
   struct Angle;
 }
 
-// See: https://dogma.dev/Angle/
+// See: https://dogma.dev/Angle
 struct dogma::Angle {
   double radians;
 };

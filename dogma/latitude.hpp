@@ -6,7 +6,7 @@ namespace dogma {
   struct Latitude;
 }
 
-// See: https://dogma.dev/Latitude/
+// See: https://dogma.dev/Latitude
 struct dogma::Latitude {
   double radians;
 };

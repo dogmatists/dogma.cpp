@@ -6,7 +6,7 @@ namespace dogma {
   struct Longitude;
 }
 
-// See: https://dogma.dev/Longitude/
+// See: https://dogma.dev/Longitude
 struct dogma::Longitude {
   double radians;
 };
