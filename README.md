@@ -43,6 +43,10 @@ $ sudo make install
 
 ### Constants
 
+- `dogma::version::major`
+- `dogma::version::minor`
+- `dogma::version::patch`
+
 ### Enums
 
 ### Classes
