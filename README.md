@@ -2,7 +2,7 @@
 
 [![Project license](https://img.shields.io/badge/license-Public%20Domain-blue.svg)](https://unlicense.org)
 ![C++ compatibility](https://img.shields.io/badge/c%2B%2B-17%20%7C%2020-blue)
-[![Continuous integration](https://github.com/dogmatists/dogma.cpp/workflows/Continuous%20integration/badge.svg)](https://github.com/dogmatists/dogma.cpp/actions?query=workflow%3A%22Continuous+integration%22)
+[![Continuous integration](https://github.com/dogmatists/dogma.cpp/workflows/CI/badge.svg)](https://github.com/dogmatists/dogma.cpp/actions?query=workflow:CI)
 
 <https://dogma.dev>
 

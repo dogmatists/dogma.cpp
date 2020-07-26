@@ -1,9 +1,22 @@
+# See: https://github.com/dogmatists/dogma.cpp/actions?query=workflow:CI
 ---
-name: Continuous integration
-on: push
+name: CI
+on:
+  push:
+    branches: [master]
+    paths:
+      - '**.cpp'
+      - '**.hpp'
+      - '**.hpp.in'
+  pull_request:
+    branches: [master]
+    paths:
+      - '**.cpp'
+      - '**.hpp'
+      - '**.hpp.in'
 jobs:
   lint:
-    name: Lint source code
+    name: Lint C++ code
     runs-on: ubuntu-18.04
     steps:
       - name: Clone repository
@@ -16,3 +29,21 @@ jobs:
         run: make lint CC=clang
       - name: Check syntax using GCC
         run: make lint CC=gcc
+  test:
+    name: Run unit tests
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Record the Clang version
+        run: clang --version
+      - name: Record the GCC version
+        run: gcc --version
+      - name: Run unit tests using Clang
+        run: make test CC=clang -B
+        env:
+          RUBYOPT: -W0
+      - name: Run unit tests using GCC
+        run: make test CC=gcc -B
+        env:
+          RUBYOPT: -W0
