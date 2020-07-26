@@ -17,11 +17,12 @@ all: $(HEADERS)
 
 # Rules for verification:
 
-test: check
+test: test.cpp dogma.hpp
+	$(CXX) -std=c++17 -Wall -Wextra -Wno-unused-function -o $@ $< && ./$@
 
-check: lint
+check: lint test
 
-.PHONY: test check
+.PHONY: check
 
 # Rules for installation:
 
@@ -56,7 +57,7 @@ format:
 	find . -name '*.[ch]pp' | xargs $(CLANGFORMAT) -style=file -i
 
 clean:
-	@rm -Rf *~
+	@rm -Rf test *~
 
 distclean: clean
 

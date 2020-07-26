@@ -9,3 +9,6 @@
 
 # Pandoc outputs
 *.html
+
+# Test runner
+test

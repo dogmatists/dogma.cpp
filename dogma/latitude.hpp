@@ -2,11 +2,17 @@
 
 #pragma once
 
+#include "angle.hpp"
+
+#include <cerrno>  // for errno, EDOM
+
 namespace dogma {
   struct Latitude;
 }
 
-// See: https://dogma.dev/Latitude
+/**
+ * @see https://dogma.dev/Latitude
+ */
 struct dogma::Latitude {
-  double radians;
+  Angle angle;
 };

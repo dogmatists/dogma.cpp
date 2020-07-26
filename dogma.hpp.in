@@ -20,6 +20,8 @@
 
 #include "dogma/version.hpp"
 
+#include "dogma/math.hpp"
+
 namespace dogma {
   struct Angle;
   struct Latitude;

@@ -18,7 +18,20 @@
 #error "<dogma.hpp> requires a C++17 or newer compiler (CXXFLAGS='-std=c++17')"
 #endif
 
+/** */
+namespace dogma {
+  namespace version {}
+}  // namespace dogma
+
+/**
+ * @see @see https://dogma.dev/history
+ */
 namespace dogma::version {}
+
+/** π */
+#ifndef M_PI
+#define M_PI (3.14159265358979323846)
+#endif
 
 namespace dogma {
   struct Angle;
@@ -26,17 +39,53 @@ namespace dogma {
   struct Longitude;
 }  // namespace dogma
 
-// See: https://dogma.dev/Angle
+/**
+ * @see https://dogma.dev/Angle
+ */
 struct dogma::Angle {
-  double radians;
+  double _radians;
+
+  /// Constructs an angle from radians.
+  static inline Angle from_radians(const double radians) {
+    return Angle{radians};
+  }
+
+  /// Constructs an angle from degrees.
+  static inline Angle from_degrees(const double degrees) {
+    return Angle{degrees / 180.0 * M_PI};
+  }
+
+  /// Constructs an angle from turns.
+  static inline Angle from_turns(const double turns) {
+    return Angle{turns * 2 * M_PI};
+  }
+
+  /// The angle in radians.
+  inline double radians() const {
+    return _radians;
+  }
+
+  /// The angle in degrees.
+  inline double degrees() const {
+    return _radians / M_PI * 180.0;
+  }
+
+  /// The angle in turns.
+  inline double turns() const {
+    return _radians / (2 * M_PI);
+  }
 };
 
-// See: https://dogma.dev/Latitude
+/**
+ * @see https://dogma.dev/Latitude
+ */
 struct dogma::Latitude {
-  double radians;
+  Angle angle;
 };
 
-// See: https://dogma.dev/Longitude
+/**
+ * @see https://dogma.dev/Longitude
+ */
 struct dogma::Longitude {
-  double radians;
+  Angle angle;
 };

@@ -2,8 +2,12 @@
 
 #pragma once
 
+/** */
 namespace dogma {
   namespace version {}
 }  // namespace dogma
 
+/**
+ * @see @see https://dogma.dev/history
+ */
 namespace dogma::version {}
