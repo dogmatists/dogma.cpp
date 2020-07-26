@@ -4,6 +4,6 @@
 
 namespace dogma {
   namespace version {}
-}
+}  // namespace dogma
 
 namespace dogma::version {}

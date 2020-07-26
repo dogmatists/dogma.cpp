@@ -24,7 +24,7 @@ namespace dogma {
   class Angle;
   class Latitude;
   class Longitude;
-}
+}  // namespace dogma
 
 #include "dogma/angle.hpp"
 #include "dogma/latitude.hpp"
