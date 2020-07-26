@@ -26,9 +26,9 @@ jobs:
       - name: Record the GCC version
         run: gcc --version
       - name: Check syntax using Clang
-        run: make lint CC=clang
+        run: make lint CXX=clang
       - name: Check syntax using GCC
-        run: make lint CC=gcc
+        run: make lint CXX=gcc
   test:
     name: Run unit tests
     runs-on: ubuntu-18.04
@@ -40,10 +40,10 @@ jobs:
       - name: Record the GCC version
         run: gcc --version
       - name: Run unit tests using Clang
-        run: make test CC=clang -B
+        run: make test CXX=clang -B
         env:
           RUBYOPT: -W0
       - name: Run unit tests using GCC
-        run: make test CC=gcc -B
+        run: make test CXX=gcc -B
         env:
           RUBYOPT: -W0

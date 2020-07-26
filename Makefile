@@ -18,7 +18,7 @@ all: $(HEADERS)
 # Rules for verification:
 
 test: test.cpp dogma.hpp
-	$(CXX) -std=c++17 -Wall -Wextra -Wno-unused-function -o $@ $< && ./$@
+	$(CXX) -std=c++17 -Wall -Wextra -o $@ $< && ./$@
 
 check: lint test
 
@@ -51,7 +51,7 @@ dogma.hpp: Rakefile dogma.hpp.in $(wildcard dogma/*.hpp)
 lint: lint-hpp
 
 lint-hpp:
-	@printf '%s\n' $(HEADERS) | sort | xargs -n1 $(CC) -x c++-header -std=c++17 -Wall -Wextra -fsyntax-only
+	@printf '%s\n' $(HEADERS) | sort | xargs -n1 $(CXX) -x c++-header -std=c++17 -Wall -Wextra -fsyntax-only
 
 format:
 	find . -name '*.[ch]pp' | xargs $(CLANGFORMAT) -style=file -i

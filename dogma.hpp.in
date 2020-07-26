@@ -18,6 +18,8 @@
 #error "<dogma.hpp> requires a C++17 or newer compiler (CXXFLAGS='-std=c++17')"
 #endif
 
+#include <cerrno>  // for errno, EDOM
+
 #include "dogma/version.hpp"
 
 #include "dogma/math.hpp"

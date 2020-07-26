@@ -36,11 +36,25 @@ static void test_Angle(void) {
 }
 
 static void test_Latitude(void) {
-  // TODO
+  errno = 0;
+  assert(Latitude{0}.degrees() == 0 && errno == 0);
+  assert(Latitude{-90}.degrees() == -90 && errno == 0);
+  assert(Latitude{90}.degrees() == 90 && errno == 0);
+  errno = 0;
+  assert(Latitude{-91}.degrees() == 0 && errno == EDOM);
+  errno = 0;
+  assert(Latitude{91}.degrees() == 0 && errno == EDOM);
 }
 
 static void test_Longitude(void) {
-  // TODO
+  errno = 0;
+  assert(Longitude{0}.degrees() == 0 && errno == 0);
+  assert(Longitude{-180}.degrees() == -180 && errno == 0);
+  assert(Longitude{180}.degrees() == 180 && errno == 0);
+  errno = 0;
+  assert(Longitude{-181}.degrees() == 0 && errno == EDOM);
+  errno = 0;
+  assert(Longitude{181}.degrees() == 0 && errno == EDOM);
 }
 
 int main(void) {
