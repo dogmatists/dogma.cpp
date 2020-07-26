@@ -21,9 +21,9 @@
 #include "dogma/version.hpp"
 
 namespace dogma {
-  class Angle;
-  class Latitude;
-  class Longitude;
+  struct Angle;
+  struct Latitude;
+  struct Longitude;
 }  // namespace dogma
 
 #include "dogma/angle.hpp"

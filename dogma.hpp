@@ -21,9 +21,9 @@
 namespace dogma::version {}
 
 namespace dogma {
-  class Angle;
-  class Latitude;
-  class Longitude;
+  struct Angle;
+  struct Latitude;
+  struct Longitude;
 }  // namespace dogma
 
 // See: https://dogma.dev/Angle
