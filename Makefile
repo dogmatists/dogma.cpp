@@ -4,6 +4,7 @@ libdir        = $(exec_prefix)/lib
 includedir    = $(prefix)/include
 datarootdir   = $(prefix)/share
 
+CLANGFORMAT   = clang-format
 RAKE          = rake
 
 HEADERS      := dogma.hpp
@@ -51,6 +52,9 @@ lint: lint-hpp
 lint-hpp:
 	@printf '%s\n' $(HEADERS) | sort | xargs -n1 $(CC) -x c++-header -std=c++17 -Wall -Wextra -fsyntax-only
 
+format:
+	find . -name '*.[ch]pp' | xargs $(CLANGFORMAT) -style=file -i
+
 clean:
 	@rm -Rf *~
 
@@ -60,7 +64,7 @@ mostlyclean: clean
 
 maintainer-clean: clean
 
-.PHONY: lint lint-hpp clean distclean mostlyclean maintainer-clean
+.PHONY: lint lint-hpp format clean distclean mostlyclean maintainer-clean
 
 .SECONDARY:
 .SUFFIXES:
