@@ -37,6 +37,11 @@ $ sudo make install
 
 ### Checking the library version
 
+```c++
+std::printf("Dogma for C++ %d.%d.%d\n",
+    dogma::version::major, dogma::version::minor, dogma::version::patch);
+```
+
 ### Miscellaneous examples
 
 ## Reference

@@ -4,9 +4,15 @@
 
 #include <cassert>  // for assert()
 #include <cerrno>   // for errno, EDOM
+#include <cstdio>   // for std::printf()
 #include <cstdlib>  // for EXIT_SUCCESS
 
 using namespace dogma;
+
+static void example_version(void) {
+  std::printf("Dogma for C++ %d.%d.%d\n",
+      dogma::version::major, dogma::version::minor, dogma::version::patch);
+}
 
 static void test_Angle_radians(void) {
   assert(Angle::from_radians(0).radians() == 0);
@@ -58,6 +64,8 @@ static void test_Longitude(void) {
 }
 
 int main(void) {
+  example_version();
+
   test_Angle();
   test_Latitude();
   test_Longitude();
