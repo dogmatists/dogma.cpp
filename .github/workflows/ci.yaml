@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Record the Clang version
         run: clang --version
       - name: Record the GCC version
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Record the Clang version
         run: clang --version
       - name: Record the GCC version
